@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "side-django-app"
+version = "0.1.0"
+description = "a django api that exposes specific csv data"
+authors = ["Floris Alexandrou <floris291197@gmail.com>"]
+readme = "README.md"
+packages = [{include = "side_django_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.2"
+djangorestframework = "^3.14.0"
+psycopg2 = "^2.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

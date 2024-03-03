@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: mat_db
+      POSTGRES_USER: mat_user
+      POSTGRES_PASSWORD: mat_password
+    ports:
+      - "5432:5432"
