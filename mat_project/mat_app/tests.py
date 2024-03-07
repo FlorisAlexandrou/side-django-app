@@ -40,3 +40,11 @@ class ClientTestCase(TestCase):
     def test_client_delete(self):
         response = self.client.delete('/clients/1/')
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_client_search(self):
+        response = self.client.get('/clients/?search=John')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_client_ordering(self):
+        response = self.client.get('/clients/?ordering=first_name')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
